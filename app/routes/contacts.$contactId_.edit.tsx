@@ -87,7 +87,7 @@ export default function EditContact() {
       </label>
       <p>
         <button type="submit">Save</button>
-        <button onClick={() => navigate(-1)} type="button">npm rundCancel</button>
+        <button onClick={() => navigate(-1)} type="button">npm rund        git pull origin main --allow-unrelated-histories        git pull origin main --allow-unrelated-histories        git pull origin main --allow-unrelated-histories        git pull origin main --allow-unrelated-historiesCancel</button>
       </p>
     </Form>
   );
