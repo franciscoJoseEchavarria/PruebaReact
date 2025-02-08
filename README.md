@@ -10,7 +10,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const updates = Object.fromEntries(formData);
   await updateContact(params.contactId, updates);
   return redirect(`/contacts/${params.contactId}`);
-};
+};´´´
 
 ### Loader
 Un loader en Remix es una función que se utiliza para cargar datos necesarios para renderizar una página. Se define en el archivo de la ruta y se exporta como loader. Esta función se ejecuta en el servidor antes de que la página se renderice.
