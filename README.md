@@ -10,30 +10,39 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const updates = Object.fromEntries(formData);
   await updateContact(params.contactId, updates);
   return redirect(`/contacts/${params.contactId}`);
-};´´´
+};
+```
 
-### Loader
+## Loader
 Un loader en Remix es una función que se utiliza para cargar datos necesarios para renderizar una página. Se define en el archivo de la ruta y se exporta como loader. Esta función se ejecuta en el servidor antes de que la página se renderice.
 
+**Ejemplo:**
+
+```tsx
 export const loader = async () => {
   const contacts = await getContacts();
   return json({ contacts });
 };
+```
 
-###useLoaderData
+### useLoaderData
 El hook useLoaderData se utiliza para acceder a los datos cargados por el loader en un componente de React. Este hook se llama dentro del componente y devuelve los datos cargados.
 
+```tsx
 ejemploe: const { contacts } = useLoaderData<typeof loader>();
+```
 
+### useActionData
 
-###useActionData
 El hook useActionData se utiliza para acceder a los datos devueltos por una action después de que se haya enviado un formulario. Este hook se llama dentro del componente y devuelve los datos devueltos por la action.
 
+```tsx
 ejemplo: const actionData = useActionData();
+```
 
-###Invariant
+### Invariant
 invariant es una función que se utiliza para realizar validaciones y lanzar errores si una condición no se cumple. Es útil para asegurarse de que ciertos valores o parámetros estén presentes antes de continuar con una operación.
-
+```tsx
 Ejemplo: import invariant from "tiny-invariant";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
@@ -44,3 +53,4 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   }
   return json({ contact });
 };
+```
