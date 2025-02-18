@@ -1,4 +1,4 @@
-## Conceptos y Uso en Remix
+## EJERCICIO DE PRUEBA PARA INCIAR EN REMIX
 
 ### Action
 En Remix, una `action` es una función que se utiliza para manejar solicitudes POST en una ruta específica. Se define en el archivo de la ruta y se exporta como `action`. Esta función se utiliza para realizar operaciones como crear, actualizar o eliminar datos.
